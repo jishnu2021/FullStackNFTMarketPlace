@@ -1,0 +1,152 @@
+import React from 'react';
+import { useState } from 'react';
+import '../styles/create.css';
+import nft3Image from '../images/nft3.jpeg';
+
+const Create = () => {
+  const [image, setImage] = useState(null); // Change setimage to setImage to follow naming conventions
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Here you can perform any action with the form data, like sending it to the server
+    console.log('Form submitted:', { image, name, price });
+    // Reset form fields after submission
+    setImage('');
+    setName('');
+    setPrice('');
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setImage(file);
+  };
+
+  const addNft = async () => {
+    console.log(name, price, image);
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('price', price);
+    formData.append('image', image);
+
+    if (!image || !name || !price) {
+      setError(true);
+      return false;
+    }
+    console.warn(image, name, price);
+    const userId = JSON.parse(localStorage.getItem('user'))._id;
+    console.warn(userId._id);
+
+    try {
+      let response = await fetch('http://localhost:5000/createnft', {
+        method: 'POST',
+        headers: {
+
+          "Content-Type": "application/json"
+        },
+        // body: formData,
+        body: JSON.stringify({
+          image: image,
+          name: name,
+          price: price,
+          ownerID: userId._id
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create NFT');
+      }
+
+      let result = await response.json();
+      console.warn(result);
+      alert('NFT Created Successfully!');
+    } catch (error) {
+      console.error('Error creating NFT:', error);
+      alert('Failed to create NFT. Please try again.');
+    }
+  };
+
+  return (
+    <>
+      <img src={nft3Image} alt="" />
+      <div className="con">
+        <h1 style={{ padding: 0 }}>Create NFT</h1>
+        <br />
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="image">Image URL:&nbsp; </label>
+            {/* Images display here.... */}
+            <input
+              type="file"
+              id="image"
+              name="image"
+              // Remove value attribute
+              accept=".jpeg, .jpg, .png"
+              onChange={handleImageChange}
+              required
+            />
+            {image === null ? (
+              ''
+            ) : (
+              <img src={URL.createObjectURL(image)} width={100} height={100} alt="nft" />
+            )}
+            <br />
+            {error && !image && <span style={{ color: 'red' }}>Enter valid Image URL</span>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+            {error && !name && <span style={{ color: 'red' }}>Enter valid name</span>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="price">Price:</label>
+            <input type="text" id="price" name="price" value={price} onChange={(e) => setPrice(e.target.value)} required />
+            {error && !price && <span style={{ color: 'red' }}>Enter valid price</span>}
+          </div>
+          <button type="submit" onClick={addNft}>
+            Create NFT
+          </button>
+        </form>
+      </div>
+    </>
+  );
+};
+
+export default Create;
+
+
+
+.image-grid-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    
+  }
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-item {
+    margin: 10px; /* Adjust the margin as needed */
+  }
+  
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .details {
+    background-color: rgba(229, 228, 228, 0.744); /* Grey background color */
+    padding: 10px; /* Padding for the details */
+    margin-top: 5px; /* Adjust the top margin as needed */
+  }

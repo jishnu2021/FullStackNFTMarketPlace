@@ -1,0 +1,222 @@
+/* Define color variables */
+:root {
+    --primary-color: #120A44;
+    --secondary-color: #463E72;
+    --main-bg-color: #FFFFFF;
+    --shadow-dark-color: #000000;
+    --icons-color: #FFFFFF;
+}
+
+body {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--main-text-color); /* Adjust text color */
+}
+
+/* Container styles */
+.bigNFTSlider_box {
+    margin: 0 auto;
+    width: 80%;
+    padding: 8rem 0; /* Adjust padding */
+    display: grid;
+    align-items: center;
+}
+
+.bigNFTSlider_box_left {
+    grid-column: 1 / span 7; /* Simplify grid column span */
+    background-color: var(--main-bg-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adjust shadow */
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 1111;
+    height: 90vh;
+}
+
+.bigNFTSlider_box_left h2 {
+    font-size: 3rem;
+}
+
+/* Profile info styles */
+.bigNFTSlider_box_left_creator {
+    display: flex; /* Use flexbox for easier alignment */
+    align-items: center;
+    gap: 1rem;
+}
+
+.bigNFTSlider_box_left_creator_profile_img {
+    border-radius: 50%;
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+}
+
+.bigNFTSlider_box_left_creator_profile_info p {
+    margin-bottom: 0.7rem; /* Adjust margin */
+    margin-top: 1rem;
+}
+
+/* Collection info styles */
+.bigNFTSlider_box_left_creator_collection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bigNFTSlider_box_left_creator_collection_icon {
+    font-size: 4rem;
+}
+/* CSS for the buttons container */
+.bigNFTSlider_box_left_button {
+    display: flex;
+    justify-content: space-evenly; /* Align buttons to the right */
+    margin-top: 0.2rem; /* Add some top margin */
+}
+
+/* Style for buttons inside .bigNFTSlider_box_left_button */
+.bigNFTSlider_box_left_button button {
+    background-color: rgb(58, 121, 146);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.bigNFTSlider_box_left_button button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.bigNFTSlider_box_left_bidding_box {
+    border: 3px solid var(--shadow-dark-color);
+    margin: 2rem 0; /* Adjust margin */
+    padding: 0 4rem;
+    border-radius: 0.5rem;
+}
+
+.bigNFTSlider_box_left_bidding_box small {
+    background-color: var(--shadow-dark-color);
+    color: white; /* Adjust text color */
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold; /* Adjust font weight */
+}
+
+/* Adjust spacing for time elements */
+.bigNFTSlider_box_left_bidding_box_timer {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Increase the gap between time elements */
+    text-align: center;
+    padding: 1rem 0 3rem 0;
+    border-bottom: 1px solid var(--shadow-dark-color);
+}
+
+.bigNFTSlider_box_left_bidding_box_timer_item p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 0;
+    padding: 0.6rem; /* Add padding to provide spacing around time values */
+}
+
+
+/* Slider button styles */
+.bigNFTSlider_box_left_sliderBtn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+/* Hover effect for slider buttons */
+.bigNFTSlider_box_left_sliderBtn_icon:hover {
+    background-color: var(--shadow-dark-color);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+/* Right box styles */
+.bigNFTSlider_box_right {
+    grid-column: 6 / -1;
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adjust shadow */
+}
+
+.bigNFTSlider_box_right_box {
+    position: relative;
+}
+
+.bigNFTSlider_box_right_box_img {
+    border-radius: 2rem;
+}
+
+.bigNFTSlider_box_right_box_like {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--icons-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+}
+/* Flexbox adjustments for medium-sized screens */
+/* Flexbox adjustments for medium-sized screens */
+@media screen and (min-width: 65rem) and (max-width: 90rem) {
+    .bigNFTSlider_box {
+        width: 80%;
+        padding: 2rem 0; /* Reduce vertical padding */
+        display: flex;
+        gap: 2rem; /* Reduce gap between picture and details box */
+    }
+
+    .bigNFTSlider_box_left,
+    .bigNFTSlider_box_right {
+        flex: 1;
+        max-width: 50%;
+        padding: 1rem; /* Reduce padding inside details box */
+    }
+
+    .bigNFTSlider_box_left {
+        height: 75vh; /* Adjust height of left box */
+        align-self: flex-start; /* Align left box to the top */
+    }
+}
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 90rem) {
+    .bigNFTSlider_box {
+        width: 70%; /* Reduce width of the container */
+        padding: 2rem 0; /* Reduce vertical padding */
+        display: flex;
+        gap: 2rem; /* Reduce gap between picture and details box */
+    }
+
+    .bigNFTSlider_box_left,
+    .bigNFTSlider_box_right {
+        flex: 1;
+        max-width: 45%; /* Reduce maximum width of details box */
+        padding: 0.5rem; 
+    }
+
+    .bigNFTSlider_box_right_box_img{
+        flex: 1;
+        max-width: 100%; 
+        height: 60vh;
+    }
+
+    .bigNFTSlider_box_left {
+        height: 79vh;
+        align-self: flex-start; 
+    }
+}

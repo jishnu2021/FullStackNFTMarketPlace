@@ -1,0 +1,157 @@
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    background-color: transparent;
+    gap: 2rem;
+    width: 100%; /* Changed width to 100% */
+  }
+  
+  
+  .navbar-item {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    height: 4rem;
+    min-width: 8rem;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: .5rem;
+    justify-content: center;
+  }
+  
+  .navbar-item.active,
+  .navbar-item:hover {
+    text-decoration: none;
+    background-color: rgb(122, 122, 122);
+    color: black;
+  }
+  
+  .collection {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .dataname,
+  .data1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1; /* Equal flex to both dataname and data1 */
+  }
+  
+  
+  .dataname {
+    color: rgb(166, 164, 164);
+    font-size: 1.1rem;
+    text-align: left;
+    padding-bottom: 1rem;
+  
+  }
+  
+  .data1 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    align-items: center; /* Align items horizontally */
+  }
+  
+  .data1:hover {
+    background-color: rgba(61, 60, 60, 0.827);
+    color: black;
+  }
+  
+  .hash {
+    width: 2rem;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .data1 .colec {
+    width: 15rem;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .vol,
+  .change,
+  .floor,
+  .sales {
+    width: 6rem;
+    text-align: center; /* Center text in these columns */
+  }
+  
+  .data1 .vol{
+    align-items: center;
+    text-align: center;
+  }
+  
+  .wrapper {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.926);
+  }
+  
+  .collection {
+    height: 10rem;
+    display: flex;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .dataname .change {
+    color: rgb(166, 164, 164);
+  }
+  
+  .change {
+    width: 6rem;
+    justify-content: center;
+    display: flex;
+    color: rgb(0, 255, 81);
+  }
+  
+  .nfts {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: white;
+    padding-top: 2rem;
+  }
+  
+  .icons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+  }
+  
+  .icons img {
+    width: 5rem; /* Set the width of the image */
+    height: 5rem; /* Set the height of the image */
+    margin-right: 1rem; 
+    /* Add margin between icon and colec */
+  }
+  .data1 .icon{
+    display: flex;
+    align-items: center;
+   padding-left: 1rem;
+  }
+  .icon .colec{
+    display: flex;
+  }
+  .icon .image{
+   display: flex;
+  }
+  .dataname .colec{
+    width: 20rem;
+  
+  }
+  .icon .image{
+    border-radius:.5rem;
+  }
+  

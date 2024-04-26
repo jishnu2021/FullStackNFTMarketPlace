@@ -1,0 +1,96 @@
+.container1{
+  /* /border: 1px solid #443c6f ;/ */
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0px 3px 15px rgba(113, 115, 119,0.5);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container1 h1{
+  font-size: 36px;
+  text-align: center;
+}
+.container1 .input-box{
+  width: 100%;
+  height: 50px;
+  /* /background: #463E72;/ */
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 40px;
+  color: #ffffff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #ffffff;
+}
+.container1 .checkbox{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.checkbox label input{
+  accent-color: #ffffff;
+  margin-right: 3px;
+}
+.checkbox a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.checkbox a:hover{
+  text-decoration: underline;
+}
+.container1 .btn{
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  outline: none;
+  border-radius:40px ;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.container1 .btn:hover{
+  background-color: #623195;
+}
+.container1 .signup{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+.signup p a{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.signup p a:hover{
+  text-decoration: underline;
+  color: #d1abf9;
+}
+.checkbox a:hover{
+  color:#d1abf9;
+}
