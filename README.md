@@ -1,29 +1,43 @@
-#NFT Marketplace
+# NFT Marketplace
+
 Welcome to the NFT Marketplace project! This project is a full-stack NFT marketplace built with React.js, Tailwind CSS, custom CSS for styling on the frontend, and Node.js, Express.js, and MongoDB on the backend. Additionally, it integrates blockchain technology using Solidity, Hardhat, and ethers.js for secure and transparent transactions.
 
-Features
-User Authentication: Secure user authentication and authorization system.
-NFT Listing: Users can create, list, and sell their NFTs on the marketplace.
-NFT Browsing: Seamless browsing experience for discovering and exploring various NFT collections.
-Transaction Management: Efficient transaction processing and management.
-Blockchain Integration: Integration of blockchain technology ensures transparency and authenticity in transactions.
-Technologies Used
-Frontend:
-React.js
-Tailwind CSS
-Custom CSS
-Backend:
-Node.js
-Express.js
-MongoDB
-Blockchain:
-Solidity
-Hardhat
-ethers.js
+## Features
+
+- **User Authentication**: Secure user authentication and authorization system.
+- **NFT Listing**: Users can create, list, and sell their NFTs on the marketplace.
+- **NFT Browsing**: Seamless browsing experience for discovering and exploring various NFT collections.
+- **Transaction Management**: Efficient transaction processing and management.
+- **Blockchain Integration**: Integration of blockchain technology ensures transparency and authenticity in transactions.
+
+## Technologies Used
+
+### Frontend:
+- React.js
+- Tailwind CSS
+- Custom CSS
+
+### Backend:
+- Node.js
+- Express.js
+- MongoDB
+
+### Blockchain:
+- Solidity
+- Hardhat
+- ethers.js
+
+## Installation
+
+1. Clone the repository:
+
+git clone https://github.com/jishnu2021/FullStackNFTMarketPlace.git
+
 
 #Installation
 1.Clone the repository:
-git clone 
+cd nft-marketplace
+
 
 2.Navigate to the project directory:
 cd NFTMarketplace
